@@ -341,7 +341,7 @@ case "$target" in
         echo 4 > /sys/module/lpm_levels/enable_low_power/l2
 	    soc_revision=`cat /sys/devices/soc0/revision`
 	    product=`getprop ro.boot.device`
-        if [ "$product" == "falcon" ]; then
+        if [ "$product" == "peregrine" ]; then
             if [ "$soc_revision" == "1.0" ]; then
                 echo 1 > /sys/kernel/debug/clk/cxo_lpm_clk/enable
             fi

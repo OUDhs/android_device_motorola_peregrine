@@ -14,13 +14,13 @@
 # limitations under the License.
 
 # inherit from the proprietary version
--include vendor/motorola/falcon/BoardConfigVendor.mk
+-include vendor/motorola/peregrine/BoardConfigVendor.mk
 
-LOCAL_PATH := device/motorola/falcon
+LOCAL_PATH := device/motorola/peregrine
 
 BOARD_VENDOR := motorola-qcom
 
-TARGET_SPECIFIC_HEADER_PATH := device/motorola/falcon/include
+TARGET_SPECIFIC_HEADER_PATH := device/motorola/peregrine/include
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8226
@@ -40,7 +40,7 @@ TARGET_BOOTLOADER_BOARD_NAME := MSM8226
 TARGET_NO_BOOTLOADER := true
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := xt1031,xt1032,xt1033,xt1034,falcon_umts,falcon_umtsds,falcon_cdma,falcon_retuaws,falcon,falcon_gpe
+TARGET_OTA_ASSERT_DEVICE := xt1039,xt1040,xt1045,peregrine_retus,peregrine_reteu,peregrine_retgb,peregrine
 
 # Kernel
 BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/mkbootimg.mk
@@ -93,12 +93,6 @@ USE_OPENGL_RENDERER := true
 
 # Encryption
 TARGET_HW_DISK_ENCRYPTION := true
-
-# Init
-TARGET_INIT_VENDOR_LIB := libinit_msm
-TARGET_LIBINIT_DEFINES_FILE := $(LOCAL_PATH)/init/init_falcon.c
-TARGET_NR_SVC_SUPP_GIDS := 28
-TARGET_UNIFIED_DEVICE := true
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
