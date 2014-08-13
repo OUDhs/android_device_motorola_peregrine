@@ -43,7 +43,7 @@ TARGET_NO_BOOTLOADER := true
 TARGET_OTA_ASSERT_DEVICE := xt1039,xt1040,xt1045,peregrine_retus,peregrine_reteu,peregrine_retgb,peregrine
 
 # Kernel
-BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/mkbootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK := device/motorola/peregrine/mkbootimg.mk
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 vmalloc=400M utags.blkdev=/dev/block/platform/msm_sdcc.1/by-name/utags androidboot.write_protect=0 zcache
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
