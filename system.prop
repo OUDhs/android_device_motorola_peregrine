@@ -96,6 +96,3 @@ ro.usb.bpteth_adb=0x2e2b
 # wifi
 persist.sys.qc.sub.rdump.on=1
 persist.sys.ssr.restart_level=3
-
-ro.product.device=peregrine
-ro.product.model=Moto G 4G
