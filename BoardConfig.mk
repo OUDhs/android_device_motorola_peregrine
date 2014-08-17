@@ -36,5 +36,28 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 5930614784
 # Recovery
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.qcom
 
+#TWRP
+DEVICE_RESOLUTION := 720x1280
+TW_IGNORE_MAJOR_AXIS_0 := true
+TW_EXTERNAL_STORAGE_PATH := "/storage/sdcard1"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "sdcard1"
+TW_CUSTOM_POWER_BUTTON := 107
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+TW_NO_USB_STORAGE := true
+TW_INTERNAL_STORAGE_PATH := "/data/media"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
+BOARD_HAS_NO_REAL_SDCARD := true
+RECOVERY_SDCARD_ON_DATA := true
+HAVE_SELINUX := true
+TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
+TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_USERIMAGES_USE_F2FS := true
+BOARD_RECOVERY_SWIPE := true
+TW_IGNORE_MAJOR_AXIS_0 := true
+RECOVERY_SDCARD_ON_DATA := true
+BOARD_HAS_NO_REAL_SDCARD := false
+PRODUCT_COPY_FILES += device/motorola/peregrine/rootdir/etc/twrp.fstab:recovery/root/etc/twrp.fstab
+
+
 # inherit from the proprietary version
 -include vendor/motorola/peregrine/BoardConfigVendor.mk
